@@ -1,166 +1,200 @@
 {
-    "lastRequest": {
-      "projectId": "4ebd5e81-010a-4bc6-91e0-0aa98173dbac",
-      "messages": [
+  "messages": [
+    {
+      "role": "system",
+      "content": ""
+    },
+    {
+      "version": "v1",
+      "chatId": "",
+      "createdAt": "2025-05-08T07:06:48.280Z",
+      "role": "assistant",
+      "content": "How can I help you today?",
+      "agenticSender": "Example Agent",
+      "agenticResponseType": "external"
+    },
+    {
+      "role": "user",
+      "content": "Tell me about article 1",
+      "version": "v1",
+      "chatId": "",
+      "createdAt": "2025-05-08T07:06:53.518Z"
+    },
+    {
+      "version": "v1",
+      "chatId": "",
+      "createdAt": "2025-05-08T07:06:55.690Z",
+      "role": "assistant",
+      "tool_calls": [
         {
-          "content": "",
-          "role": "system",
-          "sender": null,
-          "tool_calls": null,
-          "tool_call_id": null,
-          "tool_name": null
+          "id": "call_uzRd4Y1CeBioJ9h26XeGhCvH",
+          "function": {
+            "name": "rag_search",
+            "arguments": "{\"query\":\"article 1\"}"
+          },
+          "type": "function"
         }
       ],
-      "state": {
-        "last_agent_name": "DoorDash Support Hub"
+      "agenticSender": "Example Agent",
+      "agenticResponseType": "internal"
+    },
+    {
+      "version": "v1",
+      "chatId": "",
+      "createdAt": "2025-05-08T07:06:55.690Z",
+      "role": "tool",
+      "content": "{\n  \"Information\": [\n    {\n      \"title\": \"text\",\n      \"name\": \"text\",\n      \"content\": \"This is article 1.\",\n      \"docId\": \"681c50f17e7a18621c7215cd\",\n      \"sourceId\": \"681c50f17e7a18621c7215cc\"\n    },\n    {\n      \"title\": \"text\",\n      \"name\": \"text\",\n      \"content\": \"This is article 2.\",\n      \"docId\": \"681c51067e7a18621c7215cf\",\n      \"sourceId\": \"681c51067e7a18621c7215ce\"\n    },\n    {\n      \"title\": \"text\",\n      \"name\": \"text\",\n      \"content\": \"This is article 3.\",\n      \"docId\": \"681c51137e7a18621c7215d1\",\n      \"sourceId\": \"681c51137e7a18621c7215d0\"\n    }\n  ]\n}",
+      "tool_call_id": "call_uzRd4Y1CeBioJ9h26XeGhCvH",
+      "tool_name": ""
+    },
+    {
+      "version": "v1",
+      "chatId": "",
+      "createdAt": "2025-05-08T07:06:57.096Z",
+      "role": "assistant",
+      "content": "Article 1 states: \"This is article 1.\"\n\nIf you need more details or information about another article, please let me know!",
+      "agenticSender": "Example Agent",
+      "agenticResponseType": "external"
+    }
+  ],
+  "lastRequest": {
+    "projectId": "8e59c4b6-91d2-42e9-8990-41583f4105f1",
+    "messages": [
+      {
+        "content": "",
+        "role": "system",
+        "sender": null,
+        "tool_calls": null,
+        "tool_call_id": null,
+        "tool_name": null
       },
-      "agents": [
-        {
-          "name": "DoorDash Support Hub",
-          "type": "conversation",
-          "description": "Hub agent to manage DoorDash-related queries.",
-          "instructions": "## 🧑‍💼 Role:\nYou are responsible for directing DoorDash-related queries to appropriate agents.\n\n---\n## ⚙️ Steps to Follow:\n1. Greet the user and ask which DoorDash-related query they need help with (e.g., 'Are you inquiring about a missing item, delivery status, or subscription details?').\n2. If the query matches a specific task, direct the user to the corresponding agent:\n   - Missing Items → [@agent:Missing Items]\n   - Delivery Status → [@agent:Delivery Status]\n   - Subscription Info → [@agent:Subscription Info]\n3. If the query doesn't match any specific task, respond with 'I'm sorry, I didn't understand. Could you clarify your request?' or escalate to human support.\n\n---\n## 🎯 Scope:\n✅ In Scope:\n- Missing items queries\n- Delivery status queries\n- Subscription-related queries\n\n❌ Out of Scope:\n- Issues unrelated to DoorDash\n- General knowledge queries\n\n---\n## 📋 Guidelines:\n✔️ Dos:\n- Direct queries to specific DoorDash agents promptly.\n- Call [@agent:Escalation] agent for unrecognized queries.\n\n🚫 Don'ts:\n- Engage in detailed support.\n- Extend the conversation beyond DoorDash.\n- Provide user-facing text such as 'I will connect you now...' when calling another agent\n\n# Examples\n- **User** : I need help with a missing item in my order.\n - **Agent actions**: Call [@agent:Missing Items](#mention)\n\n- **User** : Can you tell me the status of my delivery?\n - **Agent actions**: Call [@agent:Delivery Status](#mention)\n\n- **User** : How are you today?\n - **Agent response**: I'm doing great. What would you like help with today?\n\n- **User** : Can you reset my account settings?\n - **Agent actions**: Call [@agent:Escalation](#mention)\n\n- **User** : I have a question about my order.\n - **Agent response**: Could you specify if it's about a missing item, delivery status, or subscription details?\n\n- **User** : What are the available subscription plans?\n - **Agent actions**: Call [@agent:Subscription Info](#mention)",
-          "model": "gpt-4o",
-          "controlType": "retain",
-          "ragK": 3,
-          "ragReturnType": "chunks",
-          "tools": [],
-          "prompts": [],
-          "connectedAgents": [
-            "Missing Items",
-            "Delivery Status",
-            "Subscription Info",
-            "Escalation"
+      {
+        "content": "How can I help you today?",
+        "role": "assistant",
+        "sender": "Example Agent",
+        "tool_calls": null,
+        "tool_call_id": null,
+        "tool_name": null,
+        "response_type": "external"
+      },
+      {
+        "content": "Tell me about article 1",
+        "role": "user",
+        "sender": null,
+        "tool_calls": null,
+        "tool_call_id": null,
+        "tool_name": null
+      }
+    ],
+    "state": {
+      "last_agent_name": "Example Agent",
+      "tokens": {
+        "total": 0,
+        "prompt": 0,
+        "completion": 0
+      }
+    },
+    "agents": [
+      {
+        "name": "Example Agent",
+        "type": "conversation",
+        "description": "An example agent that uses the rag_search tool to fetch information for customer support queries.",
+        "instructions": "## 🧑‍💼 Role:\nYou are a helpful customer support assistant who fetches information using the rag_search tool.\n\n---\n## ⚙️ Steps to Follow:\n1. Ask the user what they would like help with.\n2. If the user's query requires information or an answer, use the [@tool:rag_search] tool with the user's question as the query.\n3. Provide the user with an answer based on the information retrieved from the tool.\n4. If the user's issue is about follow-up or requires human support, ask for their email address and let them know someone will contact them soon.\n5. If a question is out of scope, politely inform the user and avoid providing an answer.\n\n---\n## 🎯 Scope:\n✅ In Scope:\n- Answering customer support questions using information from articles.\n- Asking the user their issue and getting their email if needed.\n\n❌ Out of Scope:\n- Questions unrelated to customer support.\n- Providing answers without using the rag_search tool when information is needed.\n\n---\n## 📋 Guidelines:\n✔️ Dos:\n- Use [@tool:rag_search](#mention) to fetch accurate information for user queries.\n- Provide clear and concise answers based on the tool's results.\n- Ask for the user's email if the issue requires follow-up.\n\n🚫 Don'ts:\n- Do not provide answers without fetching information when required.\n- Do not ask for details other than the user's email.\n\n# Examples\n- **User** : What is your refund policy?\n - **Agent actions**: Call [@tool:rag_search](#mention)\n - **Agent response**: Our refund policy is as follows: <summary from rag_search results>\n\n- **User** : How can I change my password?\n - **Agent actions**: Call [@tool:rag_search](#mention)\n - **Agent response**: To change your password, follow these steps: <steps from rag_search results>\n\n- **User** : I need help with my order.\n - **Agent actions**: Call [@tool:rag_search](#mention)\n - **Agent response**: Can you please provide more details about your order issue? <additional info from rag_search results if relevant>\n\n- **User** : I want someone to contact me about a billing issue.\n - **Agent response**: Sure, could you please provide your email address so someone from our team can contact you soon?\n\n- **User** : Can you tell me about your subscription plans?\n - **Agent actions**: Call [@tool:rag_search](#mention)\n - **Agent response**: Here are our subscription plans: <details from rag_search results>",
+        "model": "gpt-4.1",
+        "controlType": "retain",
+        "ragDataSources": [
+          "681c50f17e7a18621c7215cc",
+          "681c51067e7a18621c7215ce",
+          "681c51137e7a18621c7215d0"
+        ],
+        "ragK": 1,
+        "ragReturnType": "chunks",
+        "tools": [
+          "rag_search"
+        ],
+        "prompts": [],
+        "connectedAgents": []
+      }
+    ],
+    "tools": [
+      {
+        "name": "web_search",
+        "description": "Fetch information from the web based on chat context",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        },
+        "isLibrary": true
+      },
+      {
+        "name": "rag_search",
+        "description": "Fetch articles with knowledge relevant to the query",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "The query to retrieve articles for"
+            }
+          },
+          "required": [
+            "query"
           ]
         },
-        {
-          "name": "Post process",
-          "type": "post_process",
-          "description": "",
-          "instructions": "Ensure that the agent response is terse and to the point.",
-          "model": "gpt-4o-mini",
-          "controlType": "retain",
-          "ragK": 3,
-          "ragReturnType": "chunks",
-          "tools": [],
-          "prompts": [],
-          "connectedAgents": []
-        },
-        {
-          "name": "Escalation",
-          "type": "escalation",
-          "description": "",
-          "instructions": "Get the user's contact information and let them know that their request has been escalated.",
-          "model": "gpt-4o-mini",
-          "controlType": "retain",
-          "ragK": 3,
-          "ragReturnType": "chunks",
-          "tools": [],
-          "prompts": [],
-          "connectedAgents": []
-        },
-        {
-          "name": "Missing Items",
-          "type": "conversation",
-          "description": "Agent to assist users with missing items in their orders.",
-          "instructions": "## 🧑‍💼 Role:\nHelp users resolve issues with missing items in their orders.\n\n---\n## ⚙️ Steps to Follow:\n1. Fetch the order details using the [@tool:get_order_details] tool.\n2. Confirm the missing items with the user.\n3. Provide resolution options or escalate if unresolved.\n\n---\n## 🎯 Scope:\n✅ In Scope:\n- Resolving missing items issues\n\n❌ Out of Scope:\n- Delivery status queries\n- General knowledge queries\n\n---\n## 📋 Guidelines:\n✔️ Dos:\n- Use [@tool:get_order_details](#mention) to fetch accurate order information.\n- Provide clear resolution options.\n\n🚫 Don'ts:\n- Assume missing items without user confirmation.\n- Extend the conversation beyond missing items.\n\n# Examples\n- **User** : I didn't receive my fries with my order.\n - **Agent response**: Let me check your order details. Could you please provide your order ID?\n - **Agent actions**: Call [@tool:get_order_details](#mention)\n\n- **User** : My order is missing a drink.\n - **Agent response**: I apologize for the inconvenience. Let's verify your order details. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_order_details](#mention)\n\n- **User** : I didn't get the extra sauce I ordered.\n - **Agent response**: Let's check your order details to confirm. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_order_details](#mention)\n\n- **User** : My burger is missing from the order.\n - **Agent response**: I'm sorry to hear that. Let's verify your order details. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_order_details](#mention)\n\n- **User** : I didn't get my dessert.\n - **Agent response**: Let's check your order details to confirm. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_order_details](#mention)",
-          "model": "gpt-4o",
-          "controlType": "retain",
-          "ragK": 3,
-          "ragReturnType": "chunks",
-          "tools": [
-            "get_order_details"
-          ],
-          "prompts": [],
-          "connectedAgents": []
-        },
-        {
-          "name": "Delivery Status",
-          "type": "conversation",
-          "description": "Agent to assist users with delivery status queries.",
-          "instructions": "## 🧑‍💼 Role:\nHelp users with queries related to the delivery status of their orders.\n\n---\n## ⚙️ Steps to Follow:\n1. Fetch the delivery status using the [@tool:get_delivery_status] tool.\n2. Provide the user with the current delivery status.\n3. Offer additional assistance if needed.\n\n---\n## 🎯 Scope:\n✅ In Scope:\n- Providing delivery status updates\n\n❌ Out of Scope:\n- Resolving missing items issues\n- General knowledge queries\n\n---\n## 📋 Guidelines:\n✔️ Dos:\n- Use [@tool:get_delivery_status](#mention) to fetch accurate delivery information.\n- Provide clear and concise status updates.\n\n🚫 Don'ts:\n- Provide status updates without fetching current information.\n- Extend the conversation beyond delivery status.\n\n# Examples\n- **User** : Where is my order?\n - **Agent response**: Let me check the delivery status for you. Could you please provide your order ID?\n - **Agent actions**: Call [@tool:get_delivery_status](#mention)\n\n- **User** : Is my order on the way?\n - **Agent response**: I'll check the delivery status for you. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_delivery_status](#mention)\n\n- **User** : When will my order arrive?\n - **Agent response**: Let me find out the delivery status. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_delivery_status](#mention)\n\n- **User** : How long until my order gets here?\n - **Agent response**: I'll check the delivery status for you. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_delivery_status](#mention)\n\n- **User** : Is my order delayed?\n - **Agent response**: Let me check the delivery status for you. Could you provide your order ID?\n - **Agent actions**: Call [@tool:get_delivery_status](#mention)",
-          "model": "gpt-4o",
-          "controlType": "retain",
-          "ragK": 3,
-          "ragReturnType": "chunks",
-          "tools": [
-            "get_delivery_status"
-          ],
-          "prompts": [],
-          "connectedAgents": []
-        },
-        {
-          "name": "Subscription Info",
-          "type": "conversation",
-          "description": "Agent to assist users with subscription-related queries.",
-          "instructions": "## 🧑‍💼 Role:\nProvide information and answer questions related to subscriptions using RAG.\n\n---\n## ⚙️ Steps to Follow:\n1. Use RAG to retrieve relevant information about subscriptions.\n2. Answer the user's questions based on the retrieved information.\n3. If the user's query is outside the scope of subscriptions, inform them politely.\n\n---\n## 🎯 Scope:\n✅ In Scope:\n- Subscription plans and pricing\n- Subscription features and benefits\n\n❌ Out of Scope:\n- Non-subscription-related queries\n- Detailed account management\n\n---\n## 📋 Guidelines:\n✔️ Dos:\n- Use RAG to provide accurate and up-to-date information.\n- Be clear and concise in your responses.\n\n🚫 Don'ts:\n- Provide information without using RAG.\n- Extend the conversation beyond subscription topics.\n\n# Examples\n- **User** : What are the available subscription plans?\n - **Agent response**: Let me check the available subscription plans for you.\n\n- **User** : How much does the premium subscription cost?\n - **Agent response**: I'll find the current pricing for the premium subscription.\n\n- **User** : Can I change my subscription plan?\n - **Agent response**: I'll provide information on how to change your subscription plan.\n\n- **User** : What benefits do I get with a subscription?\n - **Agent response**: Let me retrieve the benefits associated with our subscription plans.\n\n- **User** : Is there a free trial available?\n - **Agent response**: I'll check if there's a free trial available for our subscriptions.",
-          "model": "gpt-4o",
-          "controlType": "relinquish_to_parent",
-          "ragDataSources": [
-            "67e1612510540d9027909e10"
-          ],
-          "ragK": 3,
-          "ragReturnType": "content",
-          "tools": [],
-          "prompts": [],
-          "connectedAgents": []
-        }
-      ],
-      "tools": [
-        {
-          "name": "get_order_details",
-          "description": "Tool to fetch the user's order details.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "order_id": {
-                "type": "string",
-                "description": "The unique identifier for the order."
-              }
+        "isLibrary": true
+      }
+    ],
+    "prompts": [],
+    "startAgent": "Example Agent",
+    "mcpServers": [],
+    "toolWebhookUrl": ""
+  },
+  "lastResponse": {
+    "state": {
+      "last_agent_name": "Example Agent",
+      "tokens": {
+        "total": 1581,
+        "prompt": 1533,
+        "completion": 48
+      }
+    },
+    "messages": [
+      {
+        "version": "v1",
+        "chatId": "",
+        "createdAt": "2025-05-08T07:06:55.690Z",
+        "role": "assistant",
+        "tool_calls": [
+          {
+            "id": "call_uzRd4Y1CeBioJ9h26XeGhCvH",
+            "function": {
+              "name": "rag_search",
+              "arguments": "{\"query\":\"article 1\"}"
             },
-            "required": [
-              "order_id"
-            ]
+            "type": "function"
           }
-        },
-        {
-          "name": "get_delivery_status",
-          "description": "Tool to fetch the delivery status of an order.",
-          "parameters": {
-            "type": "object",
-            "properties": {
-              "order_id": {
-                "type": "string",
-                "description": "The unique identifier for the order."
-              }
-            },
-            "required": [
-              "order_id"
-            ]
-          },
-          "mockTool": true,
-          "mockInstructions": "Give a mock response for a door dash order delivery status."
-        }
-      ],
-      "prompts": [
-        {
-          "name": "Style prompt",
-          "type": "style_prompt",
-          "prompt": "You should be empathetic and helpful."
-        },
-        {
-          "name": "Greeting",
-          "type": "greeting",
-          "prompt": "Hello! How can I help you?"
-        }
-      ],
-      "startAgent": "DoorDash Support Hub",
-      "mcpServers": [
-        {
-          "name": "delivery",
-          "url": "http://localhost:8000/sse"
-        }
-      ],
-      "toolWebhookUrl": "http://127.0.0.1:4020/tool_call"
-    }
+        ],
+        "agenticSender": "Example Agent",
+        "agenticResponseType": "internal"
+      },
+      {
+        "version": "v1",
+        "chatId": "",
+        "createdAt": "2025-05-08T07:06:55.690Z",
+        "role": "tool",
+        "content": "{\n  \"Information\": [\n    {\n      \"title\": \"text\",\n      \"name\": \"text\",\n      \"content\": \"This is article 1.\",\n      \"docId\": \"681c50f17e7a18621c7215cd\",\n      \"sourceId\": \"681c50f17e7a18621c7215cc\"\n    },\n    {\n      \"title\": \"text\",\n      \"name\": \"text\",\n      \"content\": \"This is article 2.\",\n      \"docId\": \"681c51067e7a18621c7215cf\",\n      \"sourceId\": \"681c51067e7a18621c7215ce\"\n    },\n    {\n      \"title\": \"text\",\n      \"name\": \"text\",\n      \"content\": \"This is article 3.\",\n      \"docId\": \"681c51137e7a18621c7215d1\",\n      \"sourceId\": \"681c51137e7a18621c7215d0\"\n    }\n  ]\n}",
+        "tool_call_id": "call_uzRd4Y1CeBioJ9h26XeGhCvH",
+        "tool_name": ""
+      },
+      {
+        "version": "v1",
+        "chatId": "",
+        "createdAt": "2025-05-08T07:06:57.096Z",
+        "role": "assistant",
+        "content": "Article 1 states: \"This is article 1.\"\n\nIf you need more details or information about another article, please let me know!",
+        "agenticSender": "Example Agent",
+        "agenticResponseType": "external"
+      }
+    ]
+  }
 }
